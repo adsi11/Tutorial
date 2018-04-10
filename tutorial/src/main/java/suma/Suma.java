@@ -7,7 +7,10 @@ public class Suma {
 	}
 	
 	public int sumaPrimerosNaturales(int limSup) {
-		return limSup * (limSup + 1) / 2;
+		if(limSup >= 0)
+			return limSup * (limSup + 1) / 2;
+		else
+			return 0;
 	}
 	
 	public int sumaIntervalo(int limInf, int limSup) {

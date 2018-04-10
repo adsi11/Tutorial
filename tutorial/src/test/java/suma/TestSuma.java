@@ -55,6 +55,8 @@ public class TestSuma {
         assertTrue("Suma de los primeros limSup' = " + limSup + " naturales es 1275", s.sumaPrimerosNaturales(limSup) == 1275);
         limSup = 36;
         assertTrue("Suma de los primeros limSup' = " + limSup + " naturales es 36", s.sumaPrimerosNaturales(limSup) == 36);
+        limSup = 10;
+        assertTrue("Suma de los primeros limSup' = " + limSup + " naturales es 55", s.sumaPrimerosNaturales(limSup) == 55);
     }
 
     @After
