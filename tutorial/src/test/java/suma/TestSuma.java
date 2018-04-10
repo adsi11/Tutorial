@@ -50,6 +50,11 @@ public class TestSuma {
         assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es -559", s.sumaIntervalo(limInf, limSup) == -559);
         limInf = -8; limSup = -8;
         assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es -8", s.sumaIntervalo(limInf, limSup) == -8);
+        
+        limSup = 50;
+        assertTrue("Suma de los primeros limSup' = " + limSup + " naturales es 1275", s.sumaPrimerosNaturales(limSup) == 1275);
+        limSup = 36;
+        assertTrue("Suma de los primeros limSup' = " + limSup + " naturales es 36", s.sumaPrimerosNaturales(limSup) == 36);
     }
 
     @After
