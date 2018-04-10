@@ -13,8 +13,10 @@ public class Suma {
 	public int sumaIntervalo(int limInf, int limSup) {
 		int suma = 0;
 		
-		for (int i = limInf; i <= limSup; i++) {
-			suma += i;
+		if(limInf <= limSup) {
+			for (int i = limInf; i <= limSup; i++) {
+				suma += i;
+			}
 		}
 		return suma;
 	}

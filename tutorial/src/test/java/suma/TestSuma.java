@@ -29,20 +29,27 @@ public class TestSuma {
     		int a, b, limInf, limSup;
     		LOG.info("Ejecutando la prueba");
         
-        a = 9;
-        b = -6;
-        limInf = -8;
-        limSup = 10;
-        
-        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es ", s.suma(a, b) == 3);
+        a = 9; b = -6;
+        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es 3", s.suma(a, b) == 3);
         a = 10; b = -6;
-        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es ", s.suma(a, b) == 4);
+        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es 4", s.suma(a, b) == 4);
         a = -69; b = 9;
-        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es ", s.suma(a, b) == -60);
+        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es -60", s.suma(a, b) == -60);
         a = 100; b = 43;
-        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es ", s.suma(a, b) == 134);
+        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es 143", s.suma(a, b) == 143);
         a = 87; b = -a;
-        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es ", s.suma(a, b) == 0);
+        assertTrue("Suma de 'a' = " + a + " y 'b' = " + b + " es 0", s.suma(a, b) == 0);
+        
+        limInf = -10; limSup = 100;
+        assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es 4995", s.sumaIntervalo(limInf, limSup) == 4995);
+        limInf = 90; limSup = 0;
+        assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es 0", s.sumaIntervalo(limInf, limSup) == 0);
+        limInf = 1000; limSup = 2000;
+        assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es 1501500", s.sumaIntervalo(limInf, limSup) == 1501500);
+        limInf = -34; limSup = -9;
+        assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es -559", s.sumaIntervalo(limInf, limSup) == -559);
+        limInf = -8; limSup = -8;
+        assertTrue("Suma del intervalo 'limInf' = " + limInf + " y 'limSup' = " + limSup + " es -8", s.sumaIntervalo(limInf, limSup) == -8);
     }
 
     @After
